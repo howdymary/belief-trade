@@ -27,6 +27,13 @@ const concepts = [
     type: 'A belief takes root',
     text: 'From complete darkness, a garden grows with every scroll.',
   },
+  {
+    slug: 'mono',
+    n: '05',
+    name: 'CONVICTION BEFORE CONSENSUS.',
+    type: 'The monochrome study',
+    text: 'Black. White. A horizontal journey through belief.',
+  },
 ];
 export default function Home() {
   return (
@@ -44,7 +51,7 @@ export default function Home() {
         <h1>
           One belief.
           <br />
-          <em>Four worlds.</em>
+          <em>Five worlds.</em>
         </h1>
         <div className="intro-bottom">
           <p>

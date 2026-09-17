@@ -1,6 +1,6 @@
 # Belief Trade — Trade Belief.
 
-Four original brand explorations for a product concept where a portfolio expresses a point of view on the future.
+Five original brand explorations for a product concept where a portfolio expresses a point of view on the future.
 
 ## The narrative
 
@@ -17,10 +17,13 @@ The ambition is creative participation and transparent composition. It does not 
 - `/belief-trade/studio/` — a clean blue-and-white vertical story
 - `/belief-trade/world/` — an original nostalgic illustrated world
 - `/belief-trade/bloom/` — begins in complete black; scrolling grows luminous plants around “The future starts with belief.”
+- `/belief-trade/mono/` — a stark black-and-white horizontal story, monumental type, visible grids, and four editorial chapters
 
 The websites include illustrative portfolio details, a manifesto, accessible dialogs, reduced-motion support, mobile layouts, and an original mascot, Bibi. No wallet connections, transactions, token issuance, deposits, analytics, or email collection.
 
 Bloom uses native vertical scrolling, a sticky scene, and original transparent botanical assets. Scroll position controls the reveal and growth; scrolling back reverses it. No scroll interception or timed intro. Visitors who prefer reduced motion, or disable JavaScript, receive a static garden with visible copy. Keyboard users can skip directly to the product story.
+
+Mono studies the typography, sparse navigation, hairline grids, and horizontal movement of the Obys reference. It uses Belief Trade's own narrative and existing mascot in monochrome. Native vertical scrolling drives a horizontal track; horizontal trackpad input, chapter links, arrow buttons, and keyboard arrows are also supported. A Shadcn/Base UI switch controls the grid. Reduced-motion, short-screen, and no-JavaScript layouts show the chapters vertically. There are no copied reference assets or scripts.
 
 ## Design source
 

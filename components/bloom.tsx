@@ -142,7 +142,7 @@ export function Bloom() {
         </div>
       </section>
       <footer className="bloom-footer">
-        <a href={`${BASE}/`}>← All four designs</a>
+        <a href={`${BASE}/`}>← All designs</a>
         <span>Early concept. No live trading.</span>
         <a href="#">Back to the beginning ↑</a>
       </footer>

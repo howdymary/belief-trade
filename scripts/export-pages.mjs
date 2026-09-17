@@ -12,7 +12,7 @@ await mkdir(output, { recursive: true });
 await cp('public', output, { recursive: true });
 await cp('dist/client/belief-trade/_next', resolve(output, '_next'), { recursive: true });
 
-for (const route of ['', 'editorial', 'studio', 'world', 'bloom']) {
+for (const route of ['', 'editorial', 'studio', 'world', 'bloom', 'mono']) {
   const url = `https://howdymary.github.io${prefix}/${route ? route + '/' : ''}`;
   const response = await handler(new Request(url));
   if (response.status !== 200) throw new Error(`Export failed: ${url} (${response.status})`);

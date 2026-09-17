@@ -92,7 +92,7 @@ function Directions({ current }: { current: string }) {
     <nav className="directions" aria-label="Design directions">
       <a href={`${BASE}/`}>All designs</a>
       <span aria-hidden="true">/</span>
-      {['editorial', 'studio', 'world', 'bloom'].map((d, i) => (
+      {['editorial', 'studio', 'world', 'bloom', 'mono'].map((d, i) => (
         <a
           key={d}
           aria-current={d === current ? 'page' : undefined}
