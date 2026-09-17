@@ -1,0 +1,350 @@
+.bloom-page {
+  --bloom-white: #f4f4e8;
+  --bloom-lime: #caeb93;
+  background: #000;
+  color: var(--bloom-white);
+  overflow: clip;
+}
+.bloom-story {
+  --bloom-progress: 0;
+  height: 440svh;
+  position: relative;
+  background: #000;
+}
+.bloom-stage {
+  height: 100svh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #000;
+}
+.bloom-light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 130%,
+    #476725 0%,
+    #111e0a 35%,
+    #000 70%
+  );
+  opacity: clamp(0, (var(--bloom-progress) - 0.14) * 1.1, 0.75);
+}
+.bloom-nav {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 34px 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: clamp(0, (var(--bloom-progress) - 0.04) * 7, 1);
+}
+.bloom-nav > a:first-child {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.bloom-nav > a:first-child span {
+  font-weight: 400;
+}
+.bloom-nav i {
+  margin-left: 7px;
+  font-style: normal;
+  color: var(--bloom-lime);
+}
+.bloom-nav > a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+.bloom-nav:focus-within {
+  opacity: 1;
+}
+.bloom-garden {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.bloom-plant {
+  --grow: clamp(0, (var(--bloom-progress) - var(--start)) * 2.55, 1);
+  --sink: 15svh;
+  position: absolute;
+  left: var(--x);
+  bottom: -10svh;
+  width: calc(var(--size) * 0.71);
+  height: var(--size);
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) translateY(calc((1 - var(--grow)) * var(--sink)))
+    rotate(calc(var(--lean) * var(--grow)))
+    scale(calc(0.35 + var(--grow) * 0.65), calc(0.035 + var(--grow) * 0.965));
+  opacity: clamp(0, var(--grow) * 4, 1);
+  clip-path: inset(calc((1 - var(--grow)) * 85%) 0 0 0);
+  will-change: transform, opacity;
+}
+.bloom-plant img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  filter: brightness(calc(0.45 + var(--grow) * 0.4));
+}
+.bloom-plant-seedling {
+  --sink: 0svh;
+  bottom: -0.5svh;
+}
+.bloom-plant-seedling img {
+  filter: brightness(0.95);
+}
+.bloom-headline {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4vw;
+  padding-bottom: 13svh;
+}
+.bloom-eyebrow {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+.bloom-kicker {
+  color: #c2c7b8;
+  margin-bottom: 32px;
+  opacity: clamp(0, (var(--bloom-progress) - 0.12) * 6, 1);
+}
+.bloom-headline h1 {
+  font:
+    400 clamp(66px, 8.3vw, 148px)/0.98 'Instrument Serif',
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+}
+.bloom-line {
+  display: block;
+}
+.bloom-line-one {
+  opacity: clamp(0, (var(--bloom-progress) - 0.07) * 6, 1);
+  transform: translateY(
+    calc((1 - clamp(0, (var(--bloom-progress) - 0.07) * 6, 1)) * 25px)
+  );
+}
+.bloom-line-two {
+  opacity: clamp(0, (var(--bloom-progress) - 0.2) * 6, 1);
+  transform: translateY(
+    calc((1 - clamp(0, (var(--bloom-progress) - 0.2) * 6, 1)) * 25px)
+  );
+}
+.bloom-headline em {
+  color: var(--bloom-lime);
+  font-weight: 400;
+}
+.bloom-headline p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 28px;
+  color: #b8bfae;
+  opacity: clamp(0, (var(--bloom-progress) - 0.44) * 6, 1);
+}
+.bloom-ground {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22svh;
+  background: linear-gradient(transparent, #000 95%);
+  pointer-events: none;
+}
+.bloom-scroll {
+  position: absolute;
+  z-index: 6;
+  bottom: 38px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: #aab69d;
+  opacity: clamp(0, var(--bloom-progress) * 100, 1);
+}
+.bloom-story[data-started='true'] .bloom-scroll {
+  opacity: clamp(0, 1 - (var(--bloom-progress) - 0.15) * 6, 1);
+}
+.bloom-chapter {
+  position: absolute;
+  z-index: 6;
+  left: 4vw;
+  bottom: 35px;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #a2ac97;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  opacity: clamp(0, (var(--bloom-progress) - 0.48) * 4, 1);
+}
+.bloom-track {
+  flex: 1;
+  height: 1px;
+  background: #283020;
+}
+.bloom-track i {
+  display: block;
+  height: 1px;
+  width: calc(var(--bloom-progress) * 100%);
+  background: var(--bloom-lime);
+}
+.bloom-next {
+  padding: 145px 24px 95px;
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #182012;
+  background: radial-gradient(ellipse at 50% 0%, #122009, #000 70%);
+}
+.bloom-next > .bloom-eyebrow {
+  color: #a7b396;
+}
+.bloom-next h2 {
+  font:
+    400 clamp(62px, 7vw, 112px)/1 'Instrument Serif',
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+  margin: 35px auto 30px;
+}
+.bloom-next h2 em {
+  color: var(--bloom-lime);
+}
+.bloom-next > p {
+  max-width: 470px;
+  margin: auto;
+  color: #aeb7a4;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.bloom-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  background: var(--bloom-lime);
+  color: #16200f;
+  padding: 17px 23px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-top: 35px;
+  transition: background 0.2s;
+}
+.bloom-cta:hover {
+  background: #e2ffc1;
+}
+.bloom-signoff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 75px;
+  color: #89957c;
+  font-size: 13px;
+}
+.bloom-signoff img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+.bloom-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 4vw;
+  border-top: 1px solid #1a2015;
+  font-size: 13px;
+  color: #9ca78f;
+}
+.bloom-footer a:hover {
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .bloom-story {
+    height: 360svh;
+  }
+  .bloom-nav {
+    padding: 25px 6vw;
+  }
+  .bloom-nav > a:last-child {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .bloom-headline {
+    padding: 0 18px 18svh;
+  }
+  .bloom-headline h1 {
+    font-size: clamp(57px, 12vw, 86px);
+  }
+  .bloom-kicker {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    margin-bottom: 25px;
+  }
+  .bloom-headline p {
+    max-width: 240px;
+    font-size: 14px;
+    margin-top: 24px;
+  }
+  .bloom-plant-fern {
+    height: calc(var(--size) * 0.63);
+    width: calc(var(--size) * 0.48);
+    bottom: -7svh;
+  }
+  .bloom-plant-seedling {
+    height: calc(var(--size) * 0.77);
+    width: calc(var(--size) * 0.5);
+  }
+  .bloom-chapter {
+    gap: 15px;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+  .bloom-next {
+    padding: 95px 25px 65px;
+  }
+  .bloom-next > p {
+    font-size: 16px;
+  }
+  .bloom-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+  }
+  .bloom-footer span {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bloom-story {
+    --bloom-progress: 1 !important;
+    height: 110svh;
+  }
+  .bloom-stage {
+    position: relative;
+  }
+  .bloom-scroll,
+  .bloom-chapter {
+    display: none;
+  }
+}

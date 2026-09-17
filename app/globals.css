@@ -151,7 +151,7 @@ html {
 }
 .concept-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   padding: 15px 0 70px;
 }
@@ -216,6 +216,20 @@ html {
 .cover-world h2 {
   font-family: 'Pixelify Sans', sans-serif;
   letter-spacing: -0.03em;
+}
+.cover-bloom {
+  background: #030603 url('/belief-trade/art/bloom-fern.webp') 140% 40% / auto
+    155% no-repeat;
+  color: #e8f6d9;
+}
+.cover-bloom h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  max-width: 320px;
+}
+.cover-bloom .concept-bottom p {
+  max-width: 200px;
 }
 .gallery-footer {
   border-top: 1px solid var(--border);

@@ -1,6 +1,6 @@
 # Belief Trade — a premium website design prompt
 
-Act as a senior brand strategist, digital art director, motion designer, and front-end engineer. Develop a distinctive identity and build three complete, shareable websites for **Belief Trade**. The tagline is **Trade Belief.**
+Act as a senior brand strategist, digital art director, motion designer, and front-end engineer. Develop a distinctive identity and build four complete, shareable websites for **Belief Trade**. The tagline is **Trade Belief.**
 
 Create original compositions with the craft of an independent design studio: exceptional typography, deliberate art direction, carefully paced storytelling, satisfying interactions, and an unmistakable point of view. Deliver working websites rather than mood boards or descriptions.
 
@@ -18,7 +18,7 @@ A creator expresses a thesis; a participant can understand its holdings and rule
 
 Develop the narrative beyond generic democratization language. Make the connection between conviction, identity, curation, and participation understandable in one minute. “Anyone can express a belief” is the ambition; actual asset availability and eligibility would depend on the eventual product design. These sites are prototypes, with illustrative portfolios and no live trading, issuance, deposits, wallet connection, or signup collection.
 
-## Three genuinely different creative directions
+## Four genuinely different creative directions
 
 ### 01 — Editorial / horizontal scrollytelling
 
@@ -39,6 +39,12 @@ Make the idea easy to understand. Show the proposed composition of one portfolio
 Create an original cozy online world inspired by the emotional qualities of early-2000s Neopets and MapleStory: discovery, belonging, charming characters, tactile interfaces, and a sense of a small world worth returning to.
 
 Use original pixel-art or illustrated scenery, warm game-like surfaces, expressive display type, and highly readable body text. Make the site feel like entering a place. Let the mascot guide a journey from a small idea to a portfolio and a community of fellow believers. Keep the financial concept legible beneath the charm. Do not copy existing game characters, logos, music, or assets.
+
+### 04 — Bloom / from darkness to possibility
+
+Begin in complete black. As the visitor scrolls down, small green shoots emerge, then luminous ferns grow around the exact headline: **“The future starts with belief.”** Make the scene feel cinematic, alive, and quietly optimistic. Use original transparent botanical photography or renders, elegant serif typography, and a restrained emerald-and-black palette.
+
+Let native vertical scroll position control plant growth and staggered text reveals. Scrolling back should reverse the scene. Avoid timed intros and scroll interception. Keep the center legible while foliage fills the sides. Transition into a concise connection between belief and a portfolio someone can understand. Include a keyboard skip link, a mobile composition, and a static, readable garden for reduced-motion and JavaScript-disabled visitors. Add the route to the comparison gallery.
 
 ## Mascot
 
@@ -71,7 +77,7 @@ Include a small comparison gallery and separate routes so each direction is inde
 
 ## Delivery
 
-Build the three routes and comparison gallery. Include this reusable brief, a short narrative rationale, and image-generation prompts in the project. Run the production build and validate routes, assets, accessibility basics, and interaction logic. If browser testing is available and authorized, inspect desktop and mobile and correct actual problems before publication.
+Build the four routes and comparison gallery. Include this reusable brief, a short narrative rationale, and image-generation prompts in the project. Run the production build and validate routes, assets, accessibility basics, and interaction logic. If browser testing is available and authorized, inspect desktop and mobile and correct actual problems before publication.
 
 Publish the finished concepts on public GitHub Pages in a dedicated repository using the authenticated owner. Publish only this website project; exclude unrelated workspace documents, secrets, and local configuration. Verify the deployment before claiming it is live. Return one comparison link and a direct link for each design. Clearly identify any unresolved blocker.
 

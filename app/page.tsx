@@ -20,6 +20,13 @@ const concepts = [
     type: 'The nostalgic adventure',
     text: 'A cozy corner of the internet for the worlds we believe in.',
   },
+  {
+    slug: 'bloom',
+    n: '04',
+    name: 'The future starts with belief.',
+    type: 'A belief takes root',
+    text: 'From complete darkness, a garden grows with every scroll.',
+  },
 ];
 export default function Home() {
   return (
@@ -37,7 +44,7 @@ export default function Home() {
         <h1>
           One belief.
           <br />
-          <em>Three worlds.</em>
+          <em>Four worlds.</em>
         </h1>
         <div className="intro-bottom">
           <p>
